@@ -1,0 +1,14 @@
+{
+  "name": "homey-store",
+  "version": "1.0.0",
+  "description": "Учебный интернет-магазин товаров для дома HOMEY",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.24.6"
+  }
+}

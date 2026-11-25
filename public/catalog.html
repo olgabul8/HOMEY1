@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог | HOMEY</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+    <a class="logo" href="/">homey<span>.</span></a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a href="/catalog.html">Каталог</a>
+      <a href="/about.html">О нас</a>
+      <a href="/contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions"><a class="cart-link" href="/cart.html">Корзина <span class="cart-count">0</span></a></div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Коллекция HOMEY</span>
+      <h1 class="page-title">Каталог товаров</h1>
+      <p>Всё для красивой сервировки, уютного интерьера и приятных домашних ритуалов.</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      
+      <div class="catalog-tools">
+        <div class="filters" id="category-filters">
+          <button class="filter-btn active" data-category="all">Все товары</button>
+          <button class="filter-btn" data-category="1">Посуда</button>
+          <button class="filter-btn" data-category="2">Декор</button>
+          <button class="filter-btn" data-category="3">Текстиль</button>
+          <button class="filter-btn" data-category="4">Для кухни</button>
+        </div>
+        <div class="search-sort">
+          <input class="search-input" id="catalog-search" type="search" placeholder="Найти товар...">
+          <select class="select" id="catalog-sort">
+            <option value="default">По умолчанию</option>
+            <option value="price_asc">Сначала дешевле</option>
+            <option value="price_desc">Сначала дороже</option>
+            <option value="name">По названию</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" id="catalog-products">
+        
+        <!-- 1. Кувшин (id=8) -->
+        <article class="product-card" data-id="8" data-category="4" data-price="1590" data-name="Кувшин Minimal">
+          <a class="product-image" href="/product.html?id=8">
+            <img src="/кувшин.png" alt="Кувшин Minimal">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Текстиль</span>
+            <a class="product-name" href="/product.html?id=8">Кувшин Minimal</a>
+            <div class="product-bottom">
+              <span class="price">1 590 ₽</span>
+              <button class="add-btn" type="button" data-add="8">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Доска (id=7) -->
+        <article class="product-card" data-id="7" data-category="4" data-price="1490" data-name="Деревянная доска">
+          <a class="product-image" href="/product.html?id=7">
+            <img src="/доска.png" alt="Деревянная доска">
+            <span class="product-badge">Новинка</span>
+          </a>
+          <div class="product-info">
+            <span class="product-category">Для кухни</span>
+            <a class="product-name" href="/product.html?id=7">Деревянная доска</a>
+            <div class="product-bottom">
+              <span class="price">1 490 ₽</span>
+              <button class="add-btn" type="button" data-add="7">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Салфетки (id=6) -->
+        <article class="product-card" data-id="6" data-category="3" data-price="1990" data-name="Комплект льняных салфеток">
+          <a class="product-image" href="/product.html?id=6">
+            <img src="/льняные.jpg" alt="Комплект льняных салфеток">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Текстиль</span>
+            <a class="product-name" href="/product.html?id=6">Комплект льняных салфеток</a>
+            <div class="product-bottom">
+              <span class="price">1 990 ₽</span>
+              <button class="add-btn" type="button" data-add="6">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Плед (id=5) -->
+        <article class="product-card" data-id="5" data-category="3" data-price="3290" data-name="Плед Soft Touch">
+          <a class="product-image" href="/product.html?id=5">
+            <img src="/плед.png" alt="Плед Soft Touch">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Текстиль</span>
+            <a class="product-name" href="/product.html?id=5">Плед Soft Touch</a>
+            <div class="product-bottom">
+              <span class="price">3 290 ₽</span>
+              <button class="add-btn" type="button" data-add="5">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Свеча (id=4) -->
+        <article class="product-card" data-id="4" data-category="2" data-price="1190" data-name="Ароматическая свеча Home">
+          <a class="product-image" href="/product.html?id=4">
+            <img src="/свеча.png" alt="Ароматическая свеча Home">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Декор</span>
+            <a class="product-name" href="/product.html?id=4">Ароматическая свеча Home</a>
+            <div class="product-bottom">
+              <span class="price">1 190 ₽</span>
+              <button class="add-btn" type="button" data-add="4">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Ваза (id=3) -->
+        <article class="product-card" data-id="3" data-category="2" data-price="1790" data-name="Ваза Forma">
+          <a class="product-image" href="/product.html?id=3">
+            <img src="/ваза.png" alt="Ваза Forma">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Декор</span>
+            <a class="product-name" href="/product.html?id=3">Ваза Forma</a>
+            <div class="product-bottom">
+              <span class="price">1 790 ₽</span>
+              <button class="add-btn" type="button" data-add="3">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Чашка (id=2) -->
+        <article class="product-card" data-id="2" data-category="1" data-price="2890" data-name="Чашка с блюдцем Sand">
+          <a class="product-image" href="/product.html?id=2">
+            <img src="/чашка.png" alt="Чашка с блюдцем Sand">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Посуда</span>
+            <a class="product-name" href="/product.html?id=2">Чашка с блюдцем Sand</a>
+            <div class="product-bottom">
+              <span class="price">2 890 ₽</span>
+              <button class="add-btn" type="button" data-add="2">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Тарелки (id=1) -->
+        <article class="product-card" data-id="1" data-category="1" data-price="5490" data-name="Набор керамических тарелок">
+          <a class="product-image" href="/product.html?id=1">
+            <img src="/тарелка.png" alt="Набор керамических тарелок">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Посуда</span>
+            <a class="product-name" href="/product.html?id=1">Набор керамических тарелок</a>
+            <div class="product-bottom">
+              <span class="price">5 490 ₽</span>
+              <button class="add-btn" type="button" data-add="1">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Ель (id=9) -->
+        <article class="product-card" data-id="9" data-category="2" data-price="1890" data-name="Ель искусственная на подставке">
+          <a class="product-image" href="/product.html?id=9">
+            <img src="/елка.jpg" alt="Ель искусственная на подставке">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Декор</span>
+            <a class="product-name" href="/product.html?id=9">Ель искусственная на подставке</a>
+            <div class="product-bottom">
+              <span class="price">1 890 ₽</span>
+              <button class="add-btn" type="button" data-add="9">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Бокал (id=10) -->
+        <article class="product-card" data-id="10" data-category="1" data-price="2290" data-name="Бокал-кубок для шампанского">
+          <a class="product-image" href="/product.html?id=10">
+            <img src="/бокал.jpg" alt="Бокал-кубок для шампанского">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Посуда</span>
+            <a class="product-name" href="/product.html?id=10">Бокал-кубок для шампанского</a>
+            <div class="product-bottom">
+              <span class="price">2 290 ₽</span>
+              <button class="add-btn" type="button" data-add="10">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Скатерть (id=11) -->
+        <article class="product-card" data-id="11" data-category="2" data-price="4990" data-name="Скатерть 160х160 см">
+          <a class="product-image" href="/product.html?id=11">
+            <img src="/скатерть.jpg" alt="Скатерть 160х160 см">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Декор</span>
+            <a class="product-name" href="/product.html?id=11">Скатерть 160х160 см</a>
+            <div class="product-bottom">
+              <span class="price">4 990 ₽</span>
+              <button class="add-btn" type="button" data-add="11">+</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. Светильник (id=12) -->
+        <article class="product-card" data-id="12" data-category="2" data-price="5990" data-name="Светильник настольный 42 см">
+          <a class="product-image" href="/product.html?id=12">
+            <img src="/светильник.jpg" alt="Светильник настольный 42 см">
+          </a>
+          <div class="product-info">
+            <span class="product-category">Декор</span>
+            <a class="product-name" href="/product.html?id=12">Светильник настольный 42 см</a>
+            <div class="product-bottom">
+              <span class="price">5 990 ₽</span>
+              <button class="add-btn" type="button" data-add="12">+</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="logo" href="/">homey<span>.</span></a><p>Дом начинается с деталей.<br>Находите вещи, которые создают уют.</p></div>
+      <div><h3>Покупателям</h3><p><a href="/catalog.html">Каталог товаров</a><br><a href="/about.html">О магазине</a><br><a href="/contacts.html">Связаться с нами</a></p></div>
+      <div><h3>Контакты</h3><p>Пн–Сб: 10:00–20:00<br>hello@homey.store<br>+7 (900) 123-45-67</p></div>
+    </div>
+    <div class="footer-bottom">2026 HOMEY. Учебный проект интернет-магазина.</div>
+  </div>
+</footer>
+<div class="toast"></div>
+
+<script src="/js/app.js"></script>
+<script src="/js/catalog.js"></script>
+</body>
+</html>
